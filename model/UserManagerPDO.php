@@ -2,10 +2,10 @@
 
 /**
 * Classe representant le manager des utilisateurs en PDO.
-* @author Bastien Vacherand.
+* @author.
 */
 
-namespace Bastien\model;
+namespace blog\model;
 
 class UserManagerPDO extends UserManager
 {
@@ -96,7 +96,7 @@ class UserManagerPDO extends UserManager
         $req->bindValue(':idUser', (int) $idUser, \PDO::PARAM_INT);
 
         $req->execute();
-        $req->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\\Bastien\\model\\User');
+        $req->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\\blog\\model\\User');
         $users = $req->fetchAll();
 
         /* On parcourt notre liste de news pour pouvoir placer des instances
@@ -135,7 +135,6 @@ class UserManagerPDO extends UserManager
                                         ORDER BY user.signupDate');
 
         $req->execute();
-        $req->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\\Bastien\\model\\User');
         $users = $req->fetchAll();
 
         /* On parcourt notre liste de news pour pouvoir placer des instances
@@ -175,7 +174,7 @@ class UserManagerPDO extends UserManager
 
         $req->execute();
 
-        $req->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\\Bastien\\model\\User');
+        $req->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\\blog\\model\\User');
 
         $user = $req->fetch();
 
