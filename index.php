@@ -1,8 +1,8 @@
 <?php
 
-use \Bastien\controller\Frontend;
-use \Bastien\controller\Backend;
-use \Bastien\model\Session;
+use \Blog\controller\Frontend;
+use \Blog\controller\Backend;
+use \Blog\model\Session;
 
 //Autoload
 require_once 'vendor/autoload.php';
