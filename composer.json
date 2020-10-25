@@ -1,5 +1,5 @@
 {
-    "name": "Bastien/blog",
+    "name": "Blog/blog",
     "license": "proprietary",
     "description": "OpenClassRooms website P5",
     "type": "project",
@@ -9,8 +9,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Bastien\\controller\\": "controller/",
-            "Bastien\\model\\": "model/"
+            "blog\\controller\\": "controller/",
+            "blog\\model\\": "model/"
         }
     }
 }
